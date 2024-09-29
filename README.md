@@ -1,1 +1,8 @@
-# WorldMap
+# World Map: Repository Overview
+The repsitory consists of my attempt at working with the world map using the python library **geopandas**. Since it inherits a lot of structure from the already popular **pandas**, working with **geopandas** to colour world maps, to overlay images, etc is a breeze. Two small projects undertaken that showcase these are kept in two separate folders.
+
+## Colour By Capitals
+The python file for the code has been provided. Used **geopandas** to load the world map into the code and work with the country data. Used **tkinter** to build the user interface to display the world map and colour it accordingly.<\br><\br> By default, a blank slate appears which starts getting filled in with countries as their corresponding capitals are entered. A score card increments everytime you enter a unique capital city.
+
+## Live Sun Tracker
+This is a step up from the previous attempt at playing with a world map. Based on the current date of the system, the code sends an **API request** to a website asking for the sunrise time at 0 latitude and 0 longitude. Based on the current time at 0 latitude and 0 longitude (obtained from the system and compensated for y the timezone) we can calculate how far the sun has moved across the sky, in our case moved horizontally across the world map.<\br><\br>Moreover, based on the time of the year (taking the Earth's tilt into account) I have calculated the shape of the projection of the day-night boundary from the sphere to a flat map. This is the shape that is superimposed over the world map.<\br><\br>All regions on the same side of the curve as the sun currently have the sun overhead, and those on the otherside do not have the sun overhead. A simple user interface has also been incorporated so that the user can compare regions recieving sunlight at various times of the day and varyinng times of the year.
